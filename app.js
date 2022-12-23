@@ -57,6 +57,11 @@ app.get("/", function(req, res) {
 
 });
 
+// Dynamic Routing ----------------------------------------------------------- +
+app.get("/:customListName", function(req, res) {
+  const customListName = req.params.customListName;
+})
+
 app.post("/", function(req, res){
   const itemName = req.body.newItem;
   const item = new Item({
